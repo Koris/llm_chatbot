@@ -14,4 +14,9 @@ streamlit run streamlit_app.py
 ```
 
 ### How to use?
-- Enter a query in the text box and press enter to receive a response. Ex query: "Give me an article from 2023 published in The lancet. Gastroenterology & hepatology."
+Enter a query in the text box and press enter to receive a response.
+
+Ex query: "Give me an article from 2023 published in The lancet. Gastroenterology & hepatology."
+
+### How does it look like?
+![Prototype](https://github.com/Koris/llm_chatbot/blob/main/prototype.jpg?raw=true)
