@@ -27,6 +27,7 @@ class GenerateCypher:
     
 
 def generate_response(prompt):
+    print(st.secrets["url"])
     url = st.secrets["url"]
     username = st.secrets["username"]
     password = st.secrets["password"]

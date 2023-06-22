@@ -1,6 +1,7 @@
 """Module to create a chatbot interface, accept user input and generate output"""
 import streamlit as st
 from streamlit_chat import message
+from gpt import generate_response, get_text
 
 
 st.set_page_config(
@@ -9,35 +10,16 @@ st.set_page_config(
 st.header("Biomedical LLM Chatbot")
 st.sidebar.header("Instructions")
 st.sidebar.info(
-    '''This is a web application that allows you to interact with an 
-    EHR knowledge graph, ask biomedical questions or general questions. 
-    '''
+    '''This is a web application that allows you to interact with an PubMed articles knowledge graph.'''
     )
 st.sidebar.info('''Enter a query in the text box and press enter
     to receive a response''')
-
-st.sidebar.info('''The app is under active development. 
-    There are several issues that needs to be fix''')
 
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
 
 if 'past' not in st.session_state:
     st.session_state['past'] = []
-
-
-model = st.radio(
-    "What task would you like to perform?",
-    ('Biomedical KG question answering', 'Biomedical question answering', 'General question answering'))
-
-if model == 'Biomedical KG question answering':
-    st.text("This is a medical KG of drug, manufacturers and outcomes")
-    from gpt import *
-if model == 'Biomedical question answering':    
-    from biogpt import *
-if model =='General question answering':
-    from falcon import *
-    
 
 user_input = get_text()
 
