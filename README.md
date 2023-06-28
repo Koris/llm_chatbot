@@ -1,6 +1,7 @@
 ## LLM Chatbot
 This is a web application that allows you to interact with GPT, augmented with a Neo4j graph database based on PubMed. 
 Base code and idea from: https://medium.com/towards-artificial-intelligence/using-large-language-models-to-build-a-biomedical-chatbot-and-deploying-it-af7818a0ab7f
+
 Note that the Neo4j graph database (connection info) and how to fill it is not part of the repository.
 
 ### Installation
